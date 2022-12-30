@@ -10,8 +10,8 @@ y = dataset.iloc[:, 1].values
 dataku = pd.DataFrame(dataset)
 plt.scatter(dataku.Umur, dataku.Angkatan)
 plt.xlabel("Umur")
-plt.ylabel("Jenis Kelamin")
-plt.title("Grafik Masa Umur Mahasiswa")
+plt.ylabel("Angkatan")
+plt.title("Masa Umur dan Angkatan Mahasiswa")
 plt.show()
 
 from sklearn.model_selection import train_test_split
