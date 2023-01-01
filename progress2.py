@@ -3,15 +3,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sklearn
 
-dataset = pd.read_csv('test.csv')
+dataset = pd.read_csv('izzanafif.csv')
 x = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
 
 dataku = pd.DataFrame(dataset)
-plt.scatter(dataku.Umur, dataku.Angkatan)
+plt.scatter(dataku.umur, dataku.gender)
 plt.xlabel("Umur")
-plt.ylabel("Angkatan")
-plt.title("Masa Umur dan Angkatan Mahasiswa")
+plt.ylabel("Gender")
+plt.title("Masa Umur dan Gender Mahasiswa")
 plt.show()
 
 from sklearn.model_selection import train_test_split
@@ -24,7 +24,7 @@ regressor.fit(X_train, y_train)
 plt.figure(figsize = (10, 8))
 plt.scatter(X_train, y_train, color = 'blue')
 plt.plot(X_train, regressor.predict(X_train), color = 'red')
-plt.title('Masa Umur Terhadap Angkatan')
+plt.title('Masa Umur Terhadap Gender')
 plt.xlabel('Masa Umur')
-plt.ylabel('Masa Angkatan')
+plt.ylabel('Gender')
 plt.show()
